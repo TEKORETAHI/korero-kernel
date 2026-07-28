@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#05070b">
+<title>VBS OS v0.1</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div id="os">
+  <div class="topbar">
+    <div class="brand"><div class="mark"></div><b>VBS OS v0.1</b><span>virtual state operating system</span></div>
+    <div class="sysbadges">
+      <span class="badge" id="procCount">0 proc</span>
+      <span class="badge" id="fabricBadge">128 bits</span>
+      <span class="badge" id="gateBadge">256 NOR</span>
+    </div>
+  </div>
+
+  <main id="desktop">
+    <div class="wallpaper"><canvas id="wallpaperCanvas"></canvas></div>
+    <div class="desktopInfo"><div class="small muted">STATE FABRIC</div><div class="big">Apps are projections.</div><div class="small muted">One runtime · shared memory · concurrent processes.</div></div>
+    <div id="windows"></div>
+
+    <div id="bootPanel" class="bootPanel">
+      <div class="bootCard stack">
+        <div><div class="sectionTitle">VBS OS boot image</div><h1>Boot the state fabric.</h1>
+          <p class="muted">The seed initializes 128 NOR-backed registers. Processes are spawned as projections over the same shared fabric.</p></div>
+        <input id="bootSeed" aria-label="boot seed">
+        <div class="row"><button id="bootBtn">Boot VBS OS</button><button id="randomBoot">Random seed</button></div>
+        <div class="small muted">No backend, no Replit tokens, no LLM required.</div>
+      </div>
+    </div>
+  </main>
+
+  <div id="dock" class="dock"></div>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

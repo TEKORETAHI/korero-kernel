@@ -4,10 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
 <meta name="theme-color" content="#050913">
-<title>VBS Infinity Frontier v0.2 Modular</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Infinity Frontier">
+<title>VBS Infinity Frontier v0.2 App</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icon.svg">
 <link rel="stylesheet" href="./styles.css">
 <link rel="stylesheet" href="./mobile-fix.css">
 <script src="./src/polyfills.js"></script>
+<script>var dt=0;</script>
 </head>
 <body>
 <canvas id="game"></canvas>
@@ -17,5 +23,10 @@
 <div id="toast" class="toast hidden"></div>
 <div id="overlay" class="overlay"></div>
 <script type="module" src="./src/main.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+}
+</script>
 </body>
 </html>

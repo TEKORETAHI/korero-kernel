@@ -1,0 +1,1 @@
+export function rngFactory(seed){let x=(seed>>>0)||1;return()=>{x^=x<<13;x^=x>>>17;x^=x<<5;return(x>>>0)/4294967296}}export function seededChoice(list,rng){return list[Math.floor(rng()*list.length)]}export function uid(prefix="id"){return`${prefix}_${Date.now().toString(36)}_${Math.random().toString(36).slice(2,7)}`}

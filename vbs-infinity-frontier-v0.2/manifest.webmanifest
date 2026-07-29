@@ -1,0 +1,19 @@
+{
+  "name": "VBS Infinity Frontier",
+  "short_name": "Infinity Frontier",
+  "description": "A modular VBS/NOR endless survival RPG.",
+  "start_url": "./index.html?source=app",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#050913",
+  "theme_color": "#050913",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
